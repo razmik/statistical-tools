@@ -30,7 +30,7 @@ class BlandAltmanAnalysis:
     @staticmethod
     def _get_min_regularised_data_per_subject(data):
 
-        min_count = min(data.groupby(['subject'])['waist_ee'].count())
+        min_count = min(data.groupby(['subject'])['evaluation_A'].count())
         return data.groupby('subject').head(min_count)
 
     @staticmethod
